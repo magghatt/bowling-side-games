@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Access groups" %>
+
+<h1>Access groups</h1>
+
+<div id="access_groups">
+  <% @access_groups.each do |access_group| %>
+    <%= render access_group %>
+    <p>
+      <%= link_to "Show this access group", access_group %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New access group", new_access_group_path %>
