@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @access_group %>
+
+<div>
+  <%= link_to "Edit this access group", edit_access_group_path(@access_group) %> |
+  <%= link_to "Back to access groups", access_groups_path %>
+
+  <%= button_to "Destroy this access group", @access_group, method: :delete %>
+</div>
