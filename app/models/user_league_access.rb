@@ -1,2 +1,0 @@
-class UserLeagueAccess < ApplicationRecord
-end

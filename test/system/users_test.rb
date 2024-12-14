@@ -14,7 +14,6 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "New user"
 
-    fill_in "Contact info", with: @user.contact_info_id
     fill_in "First name", with: @user.first_name
     fill_in "Last login date", with: @user.last_login_date
     fill_in "Last name", with: @user.last_name
@@ -30,7 +29,6 @@ class UsersTest < ApplicationSystemTestCase
     visit user_url(@user)
     click_on "Edit this user", match: :first
 
-    fill_in "Contact info", with: @user.contact_info_id
     fill_in "First name", with: @user.first_name
     fill_in "Last login date", with: @user.last_login_date.to_s
     fill_in "Last name", with: @user.last_name

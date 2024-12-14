@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_14_003733) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_14_014949) do
   create_table "access_groups", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -31,7 +31,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_14_003733) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "contact_info_id"
     t.string "login"
     t.string "password"
     t.string "first_name"
@@ -39,5 +38,12 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_14_003733) do
     t.datetime "last_login_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "street_line1"
+    t.string "street_line2"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "email"
+    t.string "phone"
   end
 end
