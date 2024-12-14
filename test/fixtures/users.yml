@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contact_info_id: 1
+  login: MyString
+  password: MyString
+  first_name: MyString
+  last_name: MyString
+  last_login_date: 2024-12-13 18:20:09
+
+two:
+  contact_info_id: 1
+  login: MyString
+  password: MyString
+  first_name: MyString
+  last_name: MyString
+  last_login_date: 2024-12-13 18:20:09

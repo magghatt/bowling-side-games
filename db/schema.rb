@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_12_023440) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_14_003733) do
   create_table "access_groups", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_league_access_groups", force: :cascade do |t|
+    t.integer "user_league_access_groups_id"
+    t.integer "user_id"
+    t.integer "league_id"
+    t.integer "access_group_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_league_access_groups_id"], name: "idx_on_user_league_access_groups_id_d1d051ce60"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.integer "contact_info_id"
+    t.string "login"
+    t.string "password"
+    t.string "first_name"
+    t.string "last_name"
+    t.datetime "last_login_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

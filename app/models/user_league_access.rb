@@ -1,0 +1,2 @@
+class UserLeagueAccess < ApplicationRecord
+end
